@@ -123,8 +123,8 @@ fun background(){
 //            Text (text = "Get Started",
 //                color = Color.Black,
 //                modifier = Modifier.fillMaxSize()
-//                )
-//        }
+//
+//
 
     }
 
