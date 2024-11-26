@@ -6,11 +6,13 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,6 +24,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -63,11 +66,76 @@ fun login(){
         verticalArrangement = Arrangement.Center,
     ) {
         Text("Login", fontSize = 30.sp, fontWeight = FontWeight.Bold)
-        Text("", fontSize = 60.sp)
-        Box(modifier = Modifier.size(width = 200.dp, height = 40.dp)) {
-            Text("Username", fontSize = 20.sp)
+        Text("", fontSize = 30.sp)
+        Box(modifier = Modifier.size(width = 300.dp, height = 450.dp)) {
+            Column {
+                Column (
+                    modifier = Modifier.size(width = 300.dp, height = 80.dp)
+                ){
+                    Text("Username", fontSize = 15.sp, fontWeight = FontWeight.Bold, modifier =
+                    Modifier.padding(horizontal = 8.dp))
+                    Text("", fontSize = 10.sp)
+                    OutlinedTextField(
+                        value = "",
+                        onValueChange = {},
+                        modifier = Modifier.fillMaxSize(),
+                        singleLine = true,
+                        placeholder = { Text("Username", fontSize = 10.sp) }
+                    )
+                }
 
+                Text("", fontSize = 10.sp)
 
+                Column (modifier = Modifier.size(width = 300.dp, height = 80.dp)){
+                    Text("Password", fontSize = 15.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 8.dp))
+                    Text("", fontSize = 10.sp)
+                    OutlinedTextField(
+                        value = "",
+                        onValueChange = {},
+                        modifier = Modifier.fillMaxSize(),
+                        singleLine = true,
+                        placeholder = { Text("Password", fontSize = 10.sp) }
+                    )
+                }
+
+                TextButton(onClick = {}) {
+                    Text("Forgot ur password?", color = Color.Black)
+                }
+
+                TextButton(onClick = {}, modifier = Modifier.align(Alignment.CenterHorizontally)
+                    .size(width = 300.dp, height = 60.dp),
+                    colors = ButtonDefaults.buttonColors(Color.Black)) {
+                    Text("Log in", color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                }
+
+                Text("Or", modifier = Modifier.align(Alignment.CenterHorizontally).
+                padding(vertical = 5.dp), fontSize = 15.sp)
+
+                TextButton(onClick = {}, modifier = Modifier.align(Alignment.CenterHorizontally)
+                    .size(width = 300.dp, height = 60.dp),
+                    colors = ButtonDefaults.buttonColors(Color.Blue)) {
+                    Text("Continue with Facebook", color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                }
+
+                Text("", fontSize = 10.sp)
+                TextButton(onClick = {}, modifier = Modifier.align(Alignment.CenterHorizontally)
+                    .size(width = 300.dp, height = 60.dp)
+                    .border(width = 2.dp, color = Color.Black, shape = MaterialTheme.shapes.extraLarge),
+                    colors = ButtonDefaults.buttonColors(Color.White)) {
+                    Text("Continue with Google", color = Color.Black, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                }
+
+            }
+
+        }
+        Row {
+            Text("Not have accout yet ?")
+            Text("Sign up", fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 2.dp))
+        }
+        Text("", fontSize = 2.sp)
+        Row {
+            Text("Are you a Mentor?")
+            Text("Get Started here", fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 2.dp))
         }
     }
 }
@@ -104,7 +172,8 @@ fun background(){
 
             Text("", fontSize = 50.sp)
 
-            TextButton(onClick = {null},
+            TextButton(onClick = {
+            },
                 modifier = Modifier.size(width = 300.dp, height = 80.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.White,
