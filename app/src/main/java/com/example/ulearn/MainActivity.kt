@@ -75,7 +75,7 @@ fun background(){
                 modifier = Modifier.size(
                     width = 300.dp,
                     height = 40.dp
-                ),
+                )
 
             )
             {
@@ -87,7 +87,7 @@ fun background(){
             Text("", fontSize = 50.sp)
 
             TextButton(onClick = {null},
-                modifier = Modifier.size(width = 200.dp, height = 80.dp),
+                modifier = Modifier.size(width = 300.dp, height = 80.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.White,
 
