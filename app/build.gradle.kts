@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.ulearn"
-    compileSdk = 27
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.ulearn"
@@ -68,4 +68,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.core.splashscreen)
 }
