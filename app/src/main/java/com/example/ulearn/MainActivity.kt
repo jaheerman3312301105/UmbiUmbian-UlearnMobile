@@ -113,9 +113,5 @@ fun background(){
     }
 
 
-@Composable
-private fun preview() {
-
-}
 
 
