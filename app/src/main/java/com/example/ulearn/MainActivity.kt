@@ -37,6 +37,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -93,7 +94,7 @@ fun background(){
 
                     )) {
                 Text(
-                    "Get Started", color = Color.Black, fontSize = 30.sp
+                    "Get Started", color = Color.Black, fontSize = 35.sp, fontWeight = FontWeight.Bold
                 )
             }
 
